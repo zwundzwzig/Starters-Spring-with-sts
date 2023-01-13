@@ -1,0 +1,29 @@
+package Animal1;
+import java.util.Date;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class AnimalAspect {
+	@Pointcut("execution ( * Animal1.*.lunch(..))")
+	public void pc() { }
+	
+	@Around("pc()")
+	public void c(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("오늘은 뭘 먹을 거에요");
+
+		Object value = pjp.proceed(); // target class method 실행되는 곳
+		if(value != null) {
+			System.out.println(value + " 먹었습니다.");
+			System.out.println(pjp.getTarget().getClass().getSimpleName() + " - " + value + " 먹었군요.");
+		}
+	}
+	
+}

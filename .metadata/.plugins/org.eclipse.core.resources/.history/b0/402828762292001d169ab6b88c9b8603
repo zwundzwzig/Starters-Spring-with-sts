@@ -1,0 +1,25 @@
+package aop1;
+
+import java.util.Date;
+
+public class Common {
+	
+	long start = 0;
+	
+	public void a() {
+		start = System.currentTimeMillis();
+		System.out.println("===> a method do before aop : " + new Date(start));
+	}
+	
+	public void b() {
+		System.out.println("===> b method do after aop : " + (System.currentTimeMillis() - start));
+	}
+	
+	public void c() {
+		start = System.currentTimeMillis();
+		System.out.println("===> c method do before & after aop : " );
+		
+		System.currentTimeMillis() - start;
+	}
+	
+}

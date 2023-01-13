@@ -1,0 +1,13 @@
+package spring.list;
+
+public class ListDTO {
+	ArrayList list;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+}

@@ -1,0 +1,20 @@
+package config;
+
+import java.util.ArrayList;
+
+import org.springframework.context.annotation.Bean;
+
+public class MyConfig {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	@Bean
+	ArrayList getList() {
+		ArrayList list = new ArrayList();
+		list.add(100);
+		return list;
+	}
+
+}

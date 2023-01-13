@@ -1,0 +1,9 @@
+package aop1;
+
+public class Board {
+	
+	public void insert(int seq) {
+		
+	}
+	
+}

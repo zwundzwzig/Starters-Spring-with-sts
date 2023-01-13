@@ -1,0 +1,9 @@
+package aop1;
+
+public class Board {
+	
+	public void insert(int seq) {
+		System.out.println(seq + " 번째 게시글");
+	}
+	
+}

@@ -1,0 +1,16 @@
+package MemberService;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		ApplicationContext factory = new ClassPathXmlApplicationContext("MemberService/member.xml");
+		
+		boolean isLogin = dao.selectMember();
+		if(isLogin) System.out.println(dao.dto.getId() + " 회원님 정상 로그인 하셨습니다.");
+		else dao.insertMember();
+	}
+
+}

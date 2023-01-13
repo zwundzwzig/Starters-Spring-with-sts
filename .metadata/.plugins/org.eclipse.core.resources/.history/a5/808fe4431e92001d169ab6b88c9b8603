@@ -1,0 +1,22 @@
+package aop1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AopMain {
+
+	public static void main(String[] args) {
+		ApplicationContext factory = new ClassPathXmlApplicationContext("aop1/aop1.xml");
+		
+		Member m = factory.getBean("member", Member.class);
+		m.insert("spring", 1111);
+		m.logIn("spring");
+		m.logOut();
+		
+		Board b = factory.getBean("board", Board.class);
+		b.insert(1);
+		b.logIn("spring");
+		b.logOut();
+	}
+
+}

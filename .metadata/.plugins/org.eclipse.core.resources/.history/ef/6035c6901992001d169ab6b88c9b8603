@@ -1,0 +1,11 @@
+package aop1;
+
+public class Member {
+	void logIn() {
+		
+	}
+	
+	void logIn() {
+		
+	}
+}

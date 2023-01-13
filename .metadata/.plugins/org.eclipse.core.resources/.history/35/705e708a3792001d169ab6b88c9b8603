@@ -1,0 +1,14 @@
+package Animal1;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Cat implements Animal {
+
+	@Override
+	public String lunch() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

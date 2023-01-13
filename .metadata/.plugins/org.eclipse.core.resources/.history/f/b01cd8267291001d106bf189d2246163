@@ -1,0 +1,9 @@
+package MemberService;
+
+public class MemberJanService implements MemberService {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

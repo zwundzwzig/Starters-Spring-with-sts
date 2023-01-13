@@ -1,0 +1,43 @@
+package aop2;
+
+import java.util.Date;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class Common {
+	
+	long start = 0;
+	
+	@Pointcut("execution (* aop2.*.*(..))")
+	public void pc() { }
+	
+	@Before("pc()")
+	public void a() {
+		start = System.currentTimeMillis();
+		System.out.println("===> a method do before aop : " + new Date(start));
+	}
+	
+	@After("pc()")
+	public void b() {
+		System.out.println("===> b method do after aop : " + (System.currentTimeMillis() - start));
+	}
+	
+	@Around()
+	public void c(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("===> c method do before aop : ");
+		System.out.println("target object : " + pjp.getTarget());
+		System.out.println("target method : " + pjp.toLongString());
+		Object value = pjp.proceed(); // target class method 실행되는 곳
+		if(value != null) System.out.println(value);
+		System.out.println("===> c method do after aop : ");
+	}
+	
+}

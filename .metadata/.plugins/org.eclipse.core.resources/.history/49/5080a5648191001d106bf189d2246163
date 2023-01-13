@@ -1,0 +1,17 @@
+package config;
+
+import java.util.ArrayList;
+
+public class MyConfig {
+
+	public static void main(String[] args) {
+
+	}
+	
+	ArrayList getList() {
+		ArrayList list = new ArrayList();
+		list.add(100);
+		return list;
+	}
+
+}

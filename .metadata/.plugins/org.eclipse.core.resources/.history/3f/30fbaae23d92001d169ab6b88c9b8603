@@ -1,0 +1,15 @@
+package Animal1;
+
+import org.springframework.stereotype.Component;
+
+@Component("dog")
+public class Dog implements Animal {
+	
+
+	@Override
+	public String lunch() {
+		String lnc = "사료";
+		return lnc;
+	}
+
+}

@@ -1,0 +1,16 @@
+package MemberService;
+
+public class MemberBasicService implements MemberService {
+	
+	MemberDAO dao;
+	
+	public void setDao(MemberDAO dao) {
+		
+	}
+	
+	@Override
+	public void registerMember() {
+
+	}
+
+}

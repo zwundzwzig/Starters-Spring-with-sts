@@ -1,0 +1,26 @@
+package aop1;
+
+import java.util.Date;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+public class Common {
+	
+	long start = 0;
+	
+	public void a() {
+		start = System.currentTimeMillis();
+		System.out.println("===> a method do before aop : " + new Date(start));
+	}
+	
+	public void b() {
+		System.out.println("===> b method do after aop : " + (System.currentTimeMillis() - start));
+	}
+	
+	public void c(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("===> c method do before aop : " );
+		Object returnVal = pjp.proceed(); // target class method 실행되는 곳
+		System.out.println("===> c method do after aop : " );
+	}
+	
+}

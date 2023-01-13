@@ -1,0 +1,13 @@
+package Animal1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AnimalMain {
+
+	public static void main(String[] args) {
+		ApplicationContext factory = new ClassPathXmlApplicationContext("Animal1.animal.xml");
+		factory.getBean("Dog")
+	}
+
+}

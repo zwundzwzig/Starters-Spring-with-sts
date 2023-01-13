@@ -1,0 +1,11 @@
+package Animal1;
+
+public class Rabbit implements Animal {
+
+	@Override
+	public String lunch() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

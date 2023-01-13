@@ -1,0 +1,17 @@
+package Member;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		ApplicationContext factory = new ClassPathXmlApplicationContext("Member/member.xml");
+		MemberDAO dao = factory.getBean("dao", MemberDAO.class);
+		MemberDTO dto1 = factory.getBean("dto1", MemberDTO.class);
+		MemberDTO dto2 = new MemberDTO();
+		MemberDTO dto3 = new MemberDTO();
+		dao.setDto(dto3);
+	}
+
+}

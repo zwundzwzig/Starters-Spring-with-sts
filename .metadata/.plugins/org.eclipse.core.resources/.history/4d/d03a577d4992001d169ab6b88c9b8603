@@ -1,0 +1,13 @@
+package mvc;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class HelloController implements Controller{
+
+	@Override
+	public String handleRequest(HttpServletRequest req, XHttpServletResponse res) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

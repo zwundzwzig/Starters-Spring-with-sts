@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<!-- target 클래스 객체 생성 --> 
+	<!-- <bean id="member" class="aop2.Member" />
+	<bean id="board" class="aop2.Board" />
+	aspect 클래스 객체 생성
+	<bean id="common" class="aop2.Common" /> -->
+	<context:component-scan base-package="aop2" />
+	<!-- aop 생성 -->
+	<aop:aspectj-autoproxy />
+	<!-- <aop:config>
+		<aop:pointcut id="pc" expression="execution (public * aop2.*.*(..))" />
+		<aop:aspect id="aopaspect" ref="common">
+			<aop:around method="c" pointcut-ref="pc" />
+		</aop:aspect>
+	</aop:config> -->
+
+</beans>

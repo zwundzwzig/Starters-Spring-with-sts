@@ -1,0 +1,10 @@
+package MemberService;
+
+public class MemberBasicService implements MemberService {
+
+	@Override
+	public void registerMember() {
+
+	}
+
+}

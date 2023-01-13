@@ -1,0 +1,9 @@
+package mvc;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.catalina.filters.ExpiresFilter.XHttpServletResponse;
+
+public interface Controller {
+	public String handleRequest(HttpServletRequest req, XHttpServletResponse res)
+}

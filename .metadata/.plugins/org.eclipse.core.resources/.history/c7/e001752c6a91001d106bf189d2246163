@@ -1,0 +1,14 @@
+package Member;
+
+public class MemberDAO {
+	MemberDTO dto;
+//	<property name="dto" ref="dto" />
+	public void setDto(MemberDTO dto) {
+		this.dto = dto;
+	}
+	
+	public boolean selectMember() {
+		if(dto.getId().equals("spring"))
+		return false;
+	}
+}

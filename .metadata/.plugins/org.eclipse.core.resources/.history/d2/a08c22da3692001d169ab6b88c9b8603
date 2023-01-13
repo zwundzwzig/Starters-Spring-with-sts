@@ -1,0 +1,10 @@
+package Animal1;
+
+public class Dog implements Animal {
+
+	@Override
+	public String lunch() {
+		return null;
+	}
+
+}

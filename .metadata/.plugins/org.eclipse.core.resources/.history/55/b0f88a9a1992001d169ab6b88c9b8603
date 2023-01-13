@@ -1,0 +1,11 @@
+package aop1;
+
+public class Member {
+	void logIn(String id) {
+		System.out.println(id + "회원님 로그인 하셨습니다.");
+	}
+	
+	void logㅒㅕ() {
+		System.out.println(id + "회원님 로그인 하셨습니다.");
+	}
+}

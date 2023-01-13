@@ -1,0 +1,22 @@
+package MemberServiceAnnotation;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import MemberAnnotation.MemberDAO;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		ApplicationContext factory = new ClassPathXmlApplicationContext("MemberServiceAnnotation/member.xml");
+		MemberDAO dao = factory.getBean("dao", MemberDAO.class);
+		
+		MemberService service = factory.getBean("service", MemberBasicService.class);
+		service.registerMember();
+		
+		System.out.println("============================");
+		String[] beanNames = factory.getBeanDefinitionNames();
+		for(String beanName : beanNames) { System.out.println(beanName); }
+	}
+
+}

@@ -1,0 +1,5 @@
+package spring.list;
+
+public class ListDTO {
+
+}
