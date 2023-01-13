@@ -3,5 +3,7 @@ INDEX VERSION 1.131
 /noneSpringMVC/src/main/java
 /Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3345425190.index
 /first/src/main/java
+/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3345425190.index
+/first/src/main/java
 /Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3397064614.index
 /second/src/main/java

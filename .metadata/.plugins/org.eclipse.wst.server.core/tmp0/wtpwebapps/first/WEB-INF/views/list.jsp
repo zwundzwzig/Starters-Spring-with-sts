@@ -1,6 +1,7 @@
-<%@page import="spring.list.ListDTO"%>
+<%@page import="mvcAnnotation.ListDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 </head>
 <body>
 <h1>get List </h1>
+<%-- <c:forEach items="${model }" varStatus="dto"/> --%>
 <%
 ListDTO dto = (ListDTO)request.getAttribute("model"); 
 %>

@@ -6,13 +6,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd"
 >
 
-	<context:component-scan base-package="MemberServiceAnnotation" />
-	<bean id="dto" class="MemberServiceAnnotation.MemberDTO" scope="singleton">
+	<!-- <context:component-scan base-package="MemberServiceAnnotation" /> -->
+	<!-- <bean id="dto" class="MemberServiceAnnotation.MemberDTO" scope="singleton">
 		<property name="id" value="spring" />
 		<property name="pw" value="1111" />
-	</bean>
+	</bean> -->
 	
-	<bean id="pdao" class="MemberServiceAnnotation.PointDAO">
+	<bean id="dao2" class="MemberServiceAnnotation.PointDAO">
 		<property name="point" value="10000" />
 	</bean>
 
@@ -36,9 +36,9 @@
 		<property name="indate" value="2023-01-11" />
 	</bean>
 
-	<bean id="dto3" class="MemberServiceAnnotation.MemberDTO">
+	<!-- <bean id="dto3" class="MemberServiceAnnotation.MemberDTO">
 		<constructor-arg name="id" value="java" />
 		<constructor-arg name="pw" value="3333" />
-	</bean>
+	</bean> -->
 
 </beans>

@@ -152,7 +152,9 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/noneSpringMVC" path="/noneSpringMVC" reloadable="true" source="org.eclipse.jst.jee.server:noneSpringMVC"/><Context docBase="/Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/first" path="/mvc" reloadable="true" source="org.eclipse.jst.jee.server:first"/></Host>
+      <Context docBase="/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/noneSpringMVC" path="/noneSpringMVC" reloadable="true" source="org.eclipse.jst.jee.server:noneSpringMVC"/>
+      <Context docBase="/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/first" path="/spring" reloadable="true" source="org.eclipse.jst.jee.server:first"/>
+      </Host>
     </Engine>
   </Service>
 </Server>
