@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="memberList" resultType="memberdto">
+		SELECT * FROM member
+	</select>
+
+	<select id="memberCount" resultType="int">
+		SELECT COUNT(*) FROM member
+	</select>
+	
+
+	<select id="oneMember" resultType="memberdto" parameterType="String">
+		SELECT * FROM member WHERE id = #{a}
+	</select>
+
+	<select id="pagingList" resultType="memberdto" parameterType="int[]">
+		SELECT * FROM member ORDER BY indate DESC LIMIT
+		<foreach collection="array" item="num" separator=",">#{num}</foreach>
+	</select>
+
+	<select id="addressSearch" resultType="memberdto" parameterType="ArrayList">
+		SELECT * FROM member WHERE address in 
+		<foreach open="(" close=")" collection="list" item="add" separator=",">#{add}</foreach>
+	</select>
+	
+	<insert id="insertMember" parameterType="memberdto">
+		INSERT INTO member VALUES(#{id}, #{pw}, #{name}, #{phone}, #{email}, #{address}, now())
+	</insert>
+	
+	<update id="updateMember" parameterType="memberdto">
+		UPDATE member SET name = #{name}, phone = #{phone}, email = #{email} WHERE id = #{id}
+	</update>
+
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM member WHERE id = #{id}
+	</delete>
+	
+	<select id="searchMember" resultType="memberdto" parameterType="HashMap">
+		SELECT * FROM member WHERE ${key} LIKE #{value}
+	</select>
+	
+	<sql id="a">
+		SELECT * FROM member
+	</sql>
+	
+	<select id="combination" resultType="memberdto" parameterType="memberdto">
+		<include refid="a" />
+		<where>
+			<choose>
+				<when test="name != null and name != '' and email != null and email != ''">
+					name = #{name} and email = #{email}
+				</when>
+				<when test="name != null and name != ''">name = #{name}</when>
+				<when test="email != null and email != ''">email = #{email}</when>
+			</choose>
+		</where> 
+	</select>
+	
+	<resultMap type="HashMap" id="memberBoardMap">
+		<result property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="title" column="title" />
+		<result property="time" column="time" />
+	</resultMap>
+	
+	<select id="memberBoard" resultMap="memberBoardMap" parameterType="String">
+		SELECT id, name, IFNULL(title, '글없음') AS title, IFNULL(writingTime, '시간 없음') AS time 
+		FROM member m LEFT OUTER JOIN board b ON m.id = b.writer 
+		WHERE m.id = #{id}
+	</select>
+</mapper>

@@ -1,9 +1,8 @@
 INDEX VERSION 1.4+/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2582799162.index
+1153635516.index
+325783306.index
+3448263620.index
+359208318.index
 2565234926.index
 1620557916.index
-3448263620.index
-1153635516.index
-3345425190.index
-2582799162.index
-325783306.index
-359208318.index

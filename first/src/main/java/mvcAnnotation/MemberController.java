@@ -30,16 +30,4 @@ public class MemberController {
 		return mv;
 	}
 
-	@GetMapping("/member")
-	String start() { return "/memberHobby"; }
-	
-	@PostMapping("/member")
-	ModelAndView end(String id, int password, int age, String[] hobby) {
-		String result = service.registerMember(dto);
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("result", result);
-		//mv.addObject("dto", dto);
-		mv.setViewName("/registersuccess");
-		return mv;
-	}
 }
