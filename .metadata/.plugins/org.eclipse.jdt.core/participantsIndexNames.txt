@@ -1,7 +1,11 @@
 INDEX VERSION 1.131
+/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1108548073.index
+/first/src/main/java
 /Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3027535919.index
 /noneSpringMVC/src/main/java
 /Users/junhyungcho/Desktop/coding/sba_sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3345425190.index
+/first/src/main/java
+/Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/70501979.index
 /first/src/main/java
 /Users/junhyungcho/Desktop/coding/Starters-Spring-with-sts/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3345425190.index
 /first/src/main/java

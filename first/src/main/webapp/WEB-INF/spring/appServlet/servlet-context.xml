@@ -19,7 +19,9 @@
 	</beans:bean>
 	
 <!-- 	<context:component-scan base-package="a.b.spring" /> -->
-	<context:component-scan base-package="mvcAnnotation" />
+	<!-- <context:component-scan base-package="mvcAnnotation" /> -->
+	<!-- mvc 관련 어노테이션 -->
+	<context:component-scan base-package="spring.mybatis" />
 	
 <!-- 	<beans:bean id="hello"  class="springmvc.HelloController" /> -->
 <!-- <beans:bean id="memberlist"  class="mvcAnnotation.ListController" /> -->

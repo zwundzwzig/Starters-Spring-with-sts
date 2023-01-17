@@ -21,7 +21,7 @@
 	<property name="indate" value="2023-01-11"  />	
 </bean> -->
 <bean id="dto2" class="mvcAnnotation.MemberDTO" >
-	<property name="id" value="framework"  />
+	<property name="id" value="framework" />
 	<property name="pw" value="2222"  />
 	<property name="name" value="김봄"  />
 	<property name="email" value="spring@l.net"  />
