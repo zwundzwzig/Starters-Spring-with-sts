@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 public class MemberDTO {
 	String id, pw, name, email, phone, address, indate;
 	
-	MemberDTO(){
+	public MemberDTO(){
 		
 	}
 	
-	MemberDTO(String id, String pw){
+	public MemberDTO(String id, String pw){
 		this.id= id;
 		this.pw= pw;
 	}

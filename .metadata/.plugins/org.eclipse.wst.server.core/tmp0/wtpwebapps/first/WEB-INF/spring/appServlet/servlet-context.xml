@@ -12,6 +12,7 @@
 	<annotation-driven />
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/upload/**" location="/Users/junhyungcho/Downloads/upload/" />
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
@@ -22,6 +23,7 @@
 	<!-- <context:component-scan base-package="mvcAnnotation" /> -->
 	<!-- mvc 관련 어노테이션 -->
 	<context:component-scan base-package="spring.mybatis" />
+	<context:component-scan base-package="upload" />
 	
 <!-- 	<beans:bean id="hello"  class="springmvc.HelloController" /> -->
 <!-- <beans:bean id="memberlist"  class="mvcAnnotation.ListController" /> -->
@@ -34,5 +36,6 @@
 		</beans:property>
 	</beans:bean>
 	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 	
 </beans:beans>

@@ -1,5 +1,0 @@
-package MemberService;
-
-public class PointDAO {
-	int point;
-}
